@@ -3,6 +3,8 @@ session_start();
 require 'Meli/meli.php';
 require 'configApp.php';
 
+
+echo "HOLA SAMIGOS"; 
 $domain = $_SERVER['HTTP_HOST'];
 $appName = explode('.', $domain)[0];
 ?>

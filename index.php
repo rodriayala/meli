@@ -78,6 +78,7 @@ $muestro_acciones = false;
                 #print_r($_SESSION);
 				$muestro_acciones = true;
 				echo '<p>USTED SE ENCUENTRA LOGUEADO</p>';
+				echo '<a href="examples/get_all_products.php">VER TODOS LOS PRODUCTOS</a>';
                 echo '</pre>';
 
                 } else {

@@ -88,6 +88,9 @@ class Meli {
         if($redirect_uri)
             $this->redirect_uri = $redirect_uri;
 
+		if(trim($this->client_id)!=0)//r//
+			$_SESSION['client_id'] = trim($this->client_id);
+			
         $body = array(
             "grant_type" => "authorization_code", 
             "client_id" => $this->client_id, 

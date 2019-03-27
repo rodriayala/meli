@@ -21,8 +21,8 @@ $params = array();
 $result = $meli->get('/sites/MLV/search', $params);
 */
 
-$access_token = $_SESSION['access_token'];
-$user_id	  = $_SESSION['client_id'];
+echo "access_token:   ".$access_token = $_SESSION['access_token'];
+echo "user_id:    ".$user_id	  = $_SESSION['client_id'];
 
 $listings = $meli -> get('/users/' . $user_id . '/items/search', array('status'=>'active', 'seller' => $user_id, 'access_token' => $access_token));
 echo 'LISTANDINGGGG: --------------------------<br>';

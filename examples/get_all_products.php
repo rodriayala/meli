@@ -19,6 +19,8 @@ echo '<pre>';
 print_r($result);
 echo '</pre>';
 
+echo "new_token:  ".$new_token = $result['body']->access_token;
+
 
 //echo "access_token:   ".$access_token = $_SESSION['access_token'];
 echo "user_id:    ".$user_id	  = $_SESSION['client_id'];

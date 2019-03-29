@@ -4,7 +4,9 @@ require 'Meli/meli.php';
 require 'configApp.php';
 
 
-echo "HOLA SAMIGOS"; 
+echo "HOLA SAMIGOS<br>"; 
+echo "client_id:".$client_id = getenv('client_id');
+
 $domain = $_SERVER['HTTP_HOST'];
 $appName = explode('.', $domain)[0];
 ?>

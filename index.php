@@ -54,7 +54,7 @@ $muestro_acciones = false;
                     $user = $meli->authorize($_GET['code'], $redirectURI);
 
                     // Now we create the sessions with the authenticated user
-                    $_SESSION['access_token'] = $user['body']->access_token;
+                   echo "token1: ". $_SESSION['access_token'] = $user['body']->access_token;
                     $_SESSION['expires_in'] = time() + $user['body']->expires_in;
                     $_SESSION['refresh_token'] = $user['body']->refresh_token;
                 } else {
@@ -65,7 +65,7 @@ $muestro_acciones = false;
                         	$refresh = $meli->refreshAccessToken();
 
                             // Now we create the sessions with the new parameters
-                            $_SESSION['access_token'] = $refresh['body']->access_token;
+                           echo "token1: ". $_SESSION['access_token'] = $refresh['body']->access_token;
                             $_SESSION['expires_in'] = time() + $refresh['body']->expires_in;
                             $_SESSION['refresh_token'] = $refresh['body']->refresh_token;
                         } catch (Exception $e) {

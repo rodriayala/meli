@@ -88,6 +88,8 @@ class Meli {
         if($redirect_uri)
             $this->redirect_uri = $redirect_uri;
 
+		echo "client_id:  ".$client_id = $this->client_id;
+		
 		if(trim($this->client_id)!=0)//r//
 			$_SESSION['client_id'] = trim($this->client_id);
 			

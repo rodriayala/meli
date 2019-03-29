@@ -8,18 +8,17 @@ $params = array();
 
 #$url = '/sites/' . $siteId;
 
-#$url = "/users/{Cust_id}/items/search?access_token=$ACCESS_TOKEN";
-
-#$result = $meli->get($url, $params);
-
-
-
 /*$params = array(
-'q' => 'dvd'
-);
- 
-$result = $meli->get('/sites/MLV/search', $params);
-*/
+'access_token' => 'dvd'
+);*/
+
+$url = "/users/{Cust_id}/items/search?access_token=$ACCESS_TOKEN";
+$result = $meli->get($url, $params);
+
+echo '<pre>';
+print_r($result);
+echo '</pre>';
+
 
 //echo "access_token:   ".$access_token = $_SESSION['access_token'];
 echo "user_id:    ".$user_id	  = $_SESSION['client_id'];

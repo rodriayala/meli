@@ -55,7 +55,6 @@ $muestro_acciones = false;
 
                     // Now we create the sessions with the authenticated user
                     $_SESSION['access_token'] = $user['body']->access_token;
-					$_SESSION['access_token2'] = $user['body']->access_token;
                     $_SESSION['expires_in'] = time() + $user['body']->expires_in;
                     $_SESSION['refresh_token'] = $user['body']->refresh_token;
                 } else {
@@ -67,7 +66,6 @@ $muestro_acciones = false;
 
                             // Now we create the sessions with the new parameters
                             $_SESSION['access_token'] = $refresh['body']->access_token;
-							$_SESSION['access_token2'] = $refresh['body']->access_token;
                             $_SESSION['expires_in'] = time() + $refresh['body']->expires_in;
                             $_SESSION['refresh_token'] = $refresh['body']->refresh_token;
                         } catch (Exception $e) {

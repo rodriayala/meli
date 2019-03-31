@@ -5,6 +5,9 @@ require '../configApp.php';
 
 $meli = new Meli($appId, $secretKey);
 
+echo "access_token:   ".$access_token = $_SESSION['access_token'];
+echo "user_id:    ".$client_id	  = $_SESSION['client_id'];
+
 //TRAIGO EL TOKEN DEL USUARIO LOGUEADO
                 if($_GET['code'] || $_SESSION['access_token']) {
 
@@ -38,7 +41,9 @@ $meli = new Meli($appId, $secretKey);
                    }
                 }
 				}
- print_r($_SESSION);				
+ echo "**********<br>";
+ print_r($_SESSION);	
+  echo "**********<br>";			
 //FIN TRAIGO EL TOKEN DEL USUARIO LOGUEADO				
 //$params = array();
 

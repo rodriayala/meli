@@ -24,11 +24,11 @@ $muestro_acciones = false;
      <link rel="stylesheet" href="/getting-started/style.css" /> <script src="script.js"></script>--> 
 
 	<link href="https://github.com/rodriayala/pinta/blob/master/assets/datatables.min.css" rel="stylesheet" type="text/css">
-	<link href="https://github.com/rodriayala/pinta/blob/master/css/estilos.css" rel="stylesheet" type="text/css">
-	<link href="https://github.com/rodriayala/pinta/blob/master/css/breadcrumb.css" rel="stylesheet" type="text/css">    
-    <link rel="stylesheet" href="https://github.com/rodriayala/pinta/blob/master/css/bootstrap-3.3.7.min.css">
-    <script src="https://github.com/rodriayala/pinta/blob/master/js/jquery-3.3.1.min.js"></script>
-	<script src="https://github.com/rodriayala/pinta/blob/master/js/bootstrap-3.3.7.js"></script>
+	<link href="css/estilos.css" rel="stylesheet" type="text/css">
+	<link href="css/breadcrumb.css" rel="stylesheet" type="text/css">    
+    <link rel="stylesheet" href="css/bootstrap-3.3.7.min.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/bootstrap-3.3.7.js"></script>
     
 </head>
 <body>

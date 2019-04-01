@@ -6,8 +6,6 @@ require '../configApp.php';
 
 $meli = new Meli($appId, $secretKey);
 
-echo "<br>access_token:   ".$access_token = $_SESSION['rotoken'];
-echo "<br>user_id:    ".$client_id	  = $_SESSION['roclient_id'];
  echo "<br>**********<br>";
 echo "<br>access_token:   ".$access_token = $_SESSION['access_token'];
 echo "<br>user_id:    ".$client_id	  = $_SESSION['client_id'];

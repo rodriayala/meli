@@ -62,24 +62,24 @@ echo '</pre>';
             </div>
         </div>
 
-<?php
-echo '<table class="table table-striped">
-  <thead>
-  <tr>
-    <td>CODIGO MERCADO LIBRE PRODUCTO</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
-  </thead>  
-  <tbody> 
-  <tr>
-    <td>'.$listings['body'][0]->results.'</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
-  </tbody>
-</table>';
-?>
+
+        <table class="table table-striped">
+          <thead>
+          <tr>
+            <td>CODIGO MERCADO LIBRE PRODUCTO</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          </thead>  
+          <tbody> 
+          <tr>
+            <td><?php $listings['body'][0]->results; ?></td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          </tr>
+          </tbody>
+        </table>
+
 	</div><!-- fin container -->
 
 

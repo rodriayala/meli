@@ -82,7 +82,7 @@ foreach ($result as $arr)
           <tbody> 
           <tr>
             <td><?php $listings['body'][0]->results; ?></td>
-            <td><?php //$listings['title'][0]->results; ?></td>
+            <td><?php $listings['body'][0]->title; ?></td>
             <td>&nbsp;</td>
           </tr>
           </tbody>

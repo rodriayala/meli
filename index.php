@@ -83,16 +83,17 @@ $muestro_acciones = false;
 				echo '<a href="actions/publish_item.php?code='.$_GET['code'].'">PUBLICAR PRODUCTO</a>';
                 echo '</pre>';
 
-				echo '<pre>';
+				/*echo '<pre>';
 				$listings2 = $meli -> get('/users/'.$_SESSION['client_id'].'?access_token='.$_SESSION['access_token']);
 				echo "<br> USUARIO LOGUEADO: **********<br>";
 				print_r($listings2);
 				echo '</pre>';
-				
+				*/
 
 				echo '<pre>';
 				$listings3 = $meli -> get('/users/me'.'?access_token='.$_SESSION['access_token']);
 				echo "<br> INFORMACION DE LA CUENTA LOGUEADO: **********<br>";
+				echo $_SESSION['user_id'] = $listings3['body']->id;
 				print_r($listings3);
 				echo '</pre>';
 								

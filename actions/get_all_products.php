@@ -8,7 +8,8 @@ $meli = new Meli($appId, $secretKey);
 
 echo "<br>**********<br>";
 echo "<br>access_token:   ".$access_token = $_SESSION['access_token'];
-echo "<br>user_id:    ".$client_id	  = $_SESSION['client_id'];
+echo "<br>client_id:    ".$client_id	  = $_SESSION['client_id'];
+echo "<br>user_id:    ".$user_id = $_SESSION['user_id'];
 
 echo "<br>**********<br>";
 print_r($_SESSION);	
@@ -29,7 +30,7 @@ echo "<br>**********<br>";
 
 //$listings = $meli -> get('/users/' . $client_id . '/items/search', array('status'=>'active', 'seller' => $client_id, 'access_token' => $access_token));
 
-$listings = $meli -> get('/users/'.$client_id.'/items/search?access_token='.$access_token);
+$listings = $meli -> get('/users/'.$user_id.'/items/search?access_token='.$access_token);
 //$listings = $meli -> get('/sites/MLA/search?seller_id='.$client_id);
 echo "<br>**********<br>";
 echo "prubea ";

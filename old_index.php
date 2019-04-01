@@ -3,11 +3,11 @@ session_start();
 require 'Meli/meli.php';
 require 'configApp.php';
 
-
+/*
 echo "HOLA SAMIGOS<br>"; 
 echo "<br> client_id:".$client_id = getenv('client_id');
 echo "<br> access_token:".$client_id = getenv('access_token');
-
+*/
 
 $domain = $_SERVER['HTTP_HOST'];
 $appName = explode('.', $domain)[0];

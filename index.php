@@ -69,7 +69,7 @@ $muestro_acciones = false;
                             // Now we create the sessions with the new parameters
                             $_SESSION['access_token'] = $refresh['body']->access_token;
 							$_SESSION['rotoken'] = $refresh['body']->access_token;
-							$_SESSION['roclient_id'] = $user['body']->client_id;
+							$_SESSION['roclient_id'] = $refresh['body']->client_id;
                             $_SESSION['expires_in'] = time() + $refresh['body']->expires_in;
                             $_SESSION['refresh_token'] = $refresh['body']->refresh_token;
                         } catch (Exception $e) {

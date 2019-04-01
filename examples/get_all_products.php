@@ -27,7 +27,9 @@ echo "<br>**********<br>";
 
 
 
-$listings = $meli -> get('/users/' . $client_id . '/items/search', array('status'=>'active', 'seller' => $client_id, 'access_token' => $access_token));
+//$listings = $meli -> get('/users/' . $client_id . '/items/search', array('status'=>'active', 'seller' => $client_id, 'access_token' => $access_token));
+
+$listings = $meli -> get('/users/'.$client_id.'/items/search?access_token='.$access_token);
 echo 'LISTANDINGGGG: --------------------------<br>';
 print_r($listings['body']->results);
 echo '<pre>';

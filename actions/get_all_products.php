@@ -29,9 +29,11 @@ echo "<br>**********<br>";
 
 //$listings = $meli -> get('/users/' . $client_id . '/items/search', array('status'=>'active', 'seller' => $client_id, 'access_token' => $access_token));
 
-//$listings = $meli -> get('https://api.mercadolibre.com/users/'.$client_id.'/items/search?access_token='.$access_token);
-$listings = $meli -> get('/sites/MLA/search?seller_id='.$client_id);
-echo "prubea rarar";
+$listings = $meli -> get('/users/'.$client_id.'/items/search?access_token='.$access_token);
+//$listings = $meli -> get('/sites/MLA/search?seller_id='.$client_id);
+echo "<br>**********<br>";
+echo "prubea ";
+
 echo 'LISTANDINGGGG: --------------------------<br>';
 print_r($listings['body']->results);
 echo '<pre>';

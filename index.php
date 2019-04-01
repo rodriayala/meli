@@ -83,6 +83,19 @@ $muestro_acciones = false;
 				echo '<a href="actions/publish_item.php?code='.$_GET['code'].'">PUBLICAR PRODUCTO</a>';
                 echo '</pre>';
 
+				echo '<p>';
+				$listings2 = $meli -> get('/users/'.$_SESSION['client_id'].'?access_token='.$_SESSION['access_token']);
+				echo "<br> USUARIO LOGUEADO: **********<br>";
+				print_r($listings2);
+				echo '</p>';
+				
+
+				echo '<p>';
+				$listings3 = $meli -> get('/users/me');
+				echo "<br> INFORMACION DE LA CUENTA LOGUEADO: **********<br>";
+				print_r($listings3);
+				echo '</p>';
+								
                 } else {
                 	echo '<p><a alt="Ingresar usando MercadoLibre oAuth 2.0" class="btn" href="' . $meli->getAuthUrl($redirectURI, Meli::$AUTH_URL[$siteId]) . '">Authenticate</a></p>';
                 }

@@ -6,41 +6,38 @@ require '../configApp.php';
 
 $meli = new Meli($appId, $secretKey);
 
-echo "<br>**********<br>";
-echo "<br>access_token:   ".$access_token = $_SESSION['access_token'];
-echo "<br>client_id:    ".$client_id	  = $_SESSION['client_id'];
-echo "<br>user_id:    ".$user_id = $_SESSION['user_id'];
-
+//echo "<br>**********<br>";
+$access_token = $_SESSION['access_token'];
+$client_id	  = $_SESSION['client_id'];
+$user_id = $_SESSION['user_id'];
+/*
 echo "<br>**********<br>";
 print_r($_SESSION);	
-echo "<br>**********<br>";			
-//FIN TRAIGO EL TOKEN DEL USUARIO LOGUEADO				
-//$params = array();
-
-
-//echo "access_token:   ".$access_token = $_SESSION['access_token2'];
-//echo "user_id:    ".$user_id	  = $_SESSION['client_id'];
-
-
-//Traer el token de usuario
-#https://developers.mercadolibre.com.ar/es_ar/server-side
-#https://api.mercadolibre.com/oauth/token?grant_type=client_credentials&client_id=YOUR_CLIENT_ID&client_secret=YOUR_SECRET_KEY
-
-
-
-//$listings = $meli -> get('/users/' . $client_id . '/items/search', array('status'=>'active', 'seller' => $client_id, 'access_token' => $access_token));
+echo "<br>**********<br>";	
+*/		
 
 $listings = $meli -> get('/users/'.$user_id.'/items/search?access_token='.$access_token);
 //$listings = $meli -> get('/sites/MLA/search?seller_id='.$client_id);
-echo "<br>**********<br>";
-echo "prubea ";
 
-echo 'LISTANDINGGGG: --------------------------<br>';
 print_r($listings['body']->results);
-echo '<pre>';
+/*echo '<pre>';
 print_r($listings);
 echo '</pre>';
-
-/*echo '<pre>';
-print_r($result);
-echo '</pre>';*/
+*/
+echo
+'<table class="table table-striped">
+  <thead>
+  <tr>
+    <td>CODIGO MERCADO LIBRE PRODUCTO</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  </thead>  
+  <tbody> 
+  <tr>
+    <td>'.$listings['body'][0]->results.'</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  </tbody>
+</table>';

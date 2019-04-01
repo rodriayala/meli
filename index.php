@@ -90,12 +90,14 @@ $muestro_acciones = false;
 				echo '</pre>';
 				*/
 
-				echo '<pre>';
+				//echo '<pre>';
 				$listings3 = $meli -> get('/users/me'.'?access_token='.$_SESSION['access_token']);
-				echo "<br> INFORMACION DE LA CUENTA LOGUEADO: **********<br>";
-				echo $_SESSION['user_id'] = $listings3['body']->id;
-				print_r($listings3);
-				echo '</pre>';
+				//echo "<br> INFORMACION DE LA CUENTA LOGUEADO: **********<br>";
+				$_SESSION['user_id'] = $listings3['body']->id;
+				//print_r($listings3);
+				//echo '</pre>';
+					
+				include_once('actions/get_all_products.php');
 								
                 } else {
                 	echo '<p><a alt="Ingresar usando MercadoLibre oAuth 2.0" class="btn" href="' . $meli->getAuthUrl($redirectURI, Meli::$AUTH_URL[$siteId]) . '">Authenticate</a></p>';

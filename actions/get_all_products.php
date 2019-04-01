@@ -30,7 +30,7 @@ $result = $listings['body']->results;
 $X=0;
 foreach ($result as $arr)
 {
-	echo "Numero $X".$arr[$X]."<br>";
+	echo "Numero $X: ".$arr[$X][0]."<br>";
 	$X++;
 }
 ?>

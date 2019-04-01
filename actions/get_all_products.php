@@ -74,7 +74,7 @@ echo '</pre>';
           <tbody> 
           <tr>
             <td><?php $listings['body'][0]->results; ?></td>
-            <td>&nbsp;</td>
+            <td><?php $listings['title'][0]->results; ?></td>
             <td>&nbsp;</td>
           </tr>
           </tbody>

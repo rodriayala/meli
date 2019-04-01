@@ -20,11 +20,16 @@ $listings = $meli -> get('/users/'.$user_id.'/items/search?access_token='.$acces
 //$listings = $meli -> get('/sites/MLA/search?seller_id='.$client_id);
 
 //print_r($listings['body']->results);
-/*echo '<pre>';
-print_r($listings);
+echo '<pre>';
+print_r($listings['body']->results);
+//print_r($listings);
 echo '</pre>';
-*/
 
+$result = $listings['body']->results;
+
+foreach ($result as $arr){
+	
+}
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -74,7 +79,7 @@ echo '</pre>';
           <tbody> 
           <tr>
             <td><?php $listings['body'][0]->results; ?></td>
-            <td><?php $listings['title'][0]->results; ?></td>
+            <td><?php //$listings['title'][0]->results; ?></td>
             <td>&nbsp;</td>
           </tr>
           </tbody>

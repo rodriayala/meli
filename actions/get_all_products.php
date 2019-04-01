@@ -24,8 +24,46 @@ $listings = $meli -> get('/users/'.$user_id.'/items/search?access_token='.$acces
 print_r($listings);
 echo '</pre>';
 */
-echo
-'<table class="table table-striped">
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>PINTURERIA</title>
+	<!--<link href="../assets/datatables.min.css" rel="stylesheet" type="text/css">
+	<link href="../css/estilos.css" rel="stylesheet" type="text/css">
+	<link href="../css/breadcrumb.css" rel="stylesheet" type="text/css">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../css/bootstrap-3.3.7.min.css">
+	<script src="../js/jquery-3.3.1.min.js"></script>
+	<script src="../js/bootstrap-3.3.7.js"></script>
+     <link rel="stylesheet" href="/getting-started/style.css" /> <script src="script.js"></script>--> 
+
+	<link href="https://github.com/rodriayala/pinta/blob/master/assets/datatables.min.css" rel="stylesheet" type="text/css">
+	<link href="css/estilos.css" rel="stylesheet" type="text/css">
+	<link href="css/breadcrumb.css" rel="stylesheet" type="text/css">    
+    <link rel="stylesheet" href="css/bootstrap-3.3.7.min.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/bootstrap-3.3.7.js"></script>
+    
+</head>
+<body>
+<?php include('../menu.php'); ?>
+	<div class="container">
+    	<div class="row">
+        	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            	<div class="panel panel-info">
+                	<div class="panel panel-heading text-rigth">
+                    	<h4>USUARIO: <?php echo $apellido." ,".$nombre; ?></h4>
+                    </div>
+                </div> 
+            </div>
+        </div>
+
+<?php
+echo '<table class="table table-striped">
   <thead>
   <tr>
     <td>CODIGO MERCADO LIBRE PRODUCTO</td>
@@ -41,3 +79,10 @@ echo
   </tr>
   </tbody>
 </table>';
+?>
+	</div><!-- fin container -->
+
+
+    </body>
+</html>
+?>

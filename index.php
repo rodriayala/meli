@@ -78,8 +78,9 @@ $muestro_acciones = false;
                 print_r($_SESSION);
 				$muestro_acciones = true;
 				echo '<p>USTED SE ENCUENTRA LOGUEADO</p>';
-				echo '<a href="examples/actions/get_all_products.php">VER TODOS LOS PRODUCTOS</a>';
-				echo '<a href="examples/actions/publish_item.php">PUBLICAR PRODUCTO</a>';
+				echo '<a href="actions/get_all_products.php">VER TODOS LOS PRODUCTOS</a>';
+				echo '<br>';
+				echo '<a href="actions/publish_item.php">PUBLICAR PRODUCTO</a>';
                 echo '</pre>';
 
                 } else {

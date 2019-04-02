@@ -27,12 +27,18 @@ echo '</pre>';
 
 $result = $listings['body']->results;
 
-$X=0;
-foreach ($result as $arr)
+//$X=0;
+/*foreach ($result as $arr)
 {
 	echo "Numero $X: ".$arr['body'][$X]->results."<br>";
 	$X++;
+}*/
+
+foreach($result as $key => $value)
+{
+  echo $key." has the value". $value;
 }
+
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">

@@ -18,26 +18,16 @@ echo "<br>**********<br>";
 
 $listings = $meli -> get('/users/'.$user_id.'/items/search?access_token='.$access_token);
 //$listings = $meli -> get('/sites/MLA/search?seller_id='.$client_id);
-
+/*
 print_r($listings['body']->results);
 echo '<pre>';
 print_r($listings['body']->results);
 //print_r($listings);
 echo '</pre>';
+*/
+//$result = $listings['body']->results;
 
-$result = $listings['body']->results;
 
-//$X=0;
-/*foreach ($result as $arr)
-{
-	echo "Numero $X: ".$arr['body'][$X]->results."<br>";
-	$X++;
-}*/
-
-foreach($result as $key => $value)
-{
-  echo $key." has the value". $value;
-}
 
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -81,16 +71,24 @@ foreach($result as $key => $value)
           <thead>
           <tr>
             <td>CODIGO MERCADO LIBRE PRODUCTO</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
+            <td>NOMBRE PRODUCTO</td>
+            <td>CANT.</td>
+            <td>PRECIO</td>
           </tr>
           </thead>  
           <tbody> 
+			<?php 	
+			foreach($result as $key => $value)
+			{
+			?>	
           <tr>
-            <td><?php $listings['body'][0]->results; ?></td>
-            <td><?php $listings['body'][0]->title; ?></td>
+            <td><?php $value ?></td>
+            <td><?php  ?></td>
             <td>&nbsp;</td>
           </tr>
+          	<?php
+            }
+			?>
           </tbody>
         </table>
 

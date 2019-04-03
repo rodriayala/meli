@@ -78,13 +78,19 @@ $result = $listings['body']->results;
           </thead>  
           <tbody> 
 			<?php 	
-			foreach($result as $key => $value)
+			foreach($result as $key => $id_prods)
 			{
 			?>	
           <tr>
-            <td><?php echo $value; ?></td>
-            <td></td>
-            <td>&nbsp;</td>
+            <td><?php echo $id_prods; ?></td><?php 
+				//veo detalle de los productos
+			
+				$listings_prods = $meli -> get('https://api.mercadolibre.com/items/'.$id_prods);
+			
+			?>
+            <td><?php $listings_prods['body']->title; ?></td>
+            <td><?php $listings_prods['body']->available_quantity; ?></td>
+            <td><?php $listings_prods['body']->price; ?></td>
           </tr>
           	<?php
             }
@@ -97,4 +103,3 @@ $result = $listings['body']->results;
 
     </body>
 </html>
-?>

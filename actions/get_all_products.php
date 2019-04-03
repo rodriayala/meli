@@ -19,13 +19,13 @@ echo "<br>**********<br>";
 $listings = $meli -> get('/users/'.$user_id.'/items/search?access_token='.$access_token);
 //$listings = $meli -> get('/sites/MLA/search?seller_id='.$client_id);
 
-print_r($listings['body']->results);
+//print_r($listings['body']->results);
 /*echo '<pre>';
 print_r($listings['body']->results);
 //print_r($listings);
 echo '</pre>';
 */
-//$result = $listings['body']->results;
+$result = $listings['body']->results;
 
 
 

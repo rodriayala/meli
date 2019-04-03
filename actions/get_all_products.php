@@ -82,7 +82,7 @@ echo '</pre>';
 			{
 			?>	
           <tr>
-            <td><?php $value ?></td>
+            <td><?php echo $value; ?></td>
             <td><?php  ?></td>
             <td>&nbsp;</td>
           </tr>

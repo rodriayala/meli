@@ -86,7 +86,7 @@ $result = $listings['body']->results;
 				//veo detalle de los productos
 			
 				$listings_prods = $meli -> get('https://api.mercadolibre.com/items/'.$id_prods);
-			
+				print_r($listings_prods['body']->results);
 			?>
             <td><?php $listings_prods['body']->title; ?></td>
             <td><?php $listings_prods['body']->available_quantity; ?></td>

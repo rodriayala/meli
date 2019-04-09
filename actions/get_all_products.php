@@ -55,12 +55,19 @@ echo '</pre>';
 foreach($array as $mydata)
 {
 	//echo $mydata->body . "\n";
-    echo "primer array". "\n";
+    echo "primer array". "<br>";
 	//foreach($mydata->body as $values)
 	foreach($mydata as $key => $prods)
     {
     	//echo $values->body . "\n";
-		echo "segundo array". "\n";
+		echo "segundo array". "<br>";
+
+		foreach($prods as $key => $prods2)
+		{
+			//echo $values->body . "\n";
+			echo "tercer array". "<br>";
+		}
+
     }
 } 
 	

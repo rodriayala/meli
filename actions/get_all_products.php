@@ -68,7 +68,7 @@ foreach($array as $mydata)
 			echo "id: ".$prods2['id'] . "<br>";
 			echo "title: ".$prods2['title'] . "<br>";
 			echo "available_quantity: ".$prods2['available_quantity'] . "<br>";
-			echo "price: ".$prods2['idprice'] . "<br>";
+			echo "price: ".$prods2['price'] . "<br>";
 			
 			//echo "tercer array". "<br>";
 		}

@@ -47,7 +47,7 @@ echo '</pre>';
 $array = json_decode(json_encode($listings2),true);
 
 
-foreach($user->body as $mydata)
+foreach($array->body as $mydata)
 {
 	echo $mydata->name . "\n";
     foreach($mydata->values as $values)

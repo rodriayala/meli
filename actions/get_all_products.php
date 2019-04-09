@@ -39,8 +39,7 @@ $listings2 = $meli -> get('/items?ids='.$quest_prods);
 
 //$result2 = $listings2['body']->results;
 echo '<pre>';
-
-//print_r($listings2);
+print_r($listings2);
 echo '</pre>';
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -91,7 +90,8 @@ echo '</pre>';
           </thead>  
           <tbody> 
 			<?php 	
-			foreach($listings2 as $key => $prods)
+			//foreach($listings2 as $key => $prods)
+			foreach($listings2 as  $prods)
 			{
 			?>	
           <tr>

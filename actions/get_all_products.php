@@ -39,10 +39,23 @@ $listings2 = $meli -> get('/items?ids='.$quest_prods);
 
 //$result2 = $listings2['body']->results;
 echo '<pre>';
-print_r($listings2);
+//print_r($listings2);
 echo '</pre>';
 
+//$obj = json_decode($listings2);
 
+$array = json_decode(json_encode($listings2),true);
+
+
+foreach($user->body as $mydata)
+{
+	echo $mydata->name . "\n";
+    foreach($mydata->values as $values)
+    {
+    	echo $values->value . "\n";
+    }
+}  
+	
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">

@@ -55,18 +55,22 @@ echo '</pre>';
 foreach($array as $mydata)
 {
 	//echo $mydata->body . "\n";
-    echo "primer array". "<br>";
+   # echo "primer array". "<br>";
 	//foreach($mydata->body as $values)
 	foreach($mydata as $key => $prods)
     {
     	//echo $values->body . "\n";
-		echo "segundo array". "<br>";
+		#echo "segundo array". "<br>";
 
 		foreach($prods as $key2 => $prods2)
 		{
 			//var_dump($prods2);
-			echo "id: ".$prods2['id'] . "\n";
-			echo "tercer array". "<br>";
+			echo "id: ".$prods2['id'] . "<br>";
+			echo "title: ".$prods2['title'] . "<br>";
+			echo "available_quantity: ".$prods2['available_quantity'] . "<br>";
+			echo "price: ".$prods2['idprice'] . "<br>";
+			
+			//echo "tercer array". "<br>";
 		}
 
     }

@@ -35,7 +35,7 @@ foreach($result as $key => $id_prods)
 	$quest_prods = $quest_prods.",".$id_prods;
 }
 echo "lista final: ".$quest_prods;
-$listings2 = $meli -> multiget('/items?ids='.$quest_prods);
+$listings2 = $meli -> get('/items?ids='.$quest_prods);
 
 $result2 = $listings2['body']->results;
 print_r($result2);

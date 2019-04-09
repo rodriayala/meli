@@ -44,19 +44,24 @@ echo '</pre>';
 
 //$obj = json_decode($listings2);
 
-$array = json_decode(json_encode($listings2),true);
+#$array = json_decode(json_encode($listings2),true);
 
 echo '<pre>';
 print_r($array);
 echo '</pre>';
-foreach($array->body as $mydata)
+
+$array = json_decode($listings2);
+//echo $character->body;
+foreach($array as $mydata)
 {
-	echo $mydata->body . "\n";
-    foreach($mydata->values as $values)
+	//echo $mydata->body . "\n";
+    echo "primer array". "\n";
+	foreach($mydata->body as $values)
     {
-    	echo $values->value . "\n";
+    	echo $values->body . "\n";
+		echo "segundo array". "\n";
     }
-}  
+} 
 	
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">

@@ -65,7 +65,7 @@ foreach($array as $mydata)
 		foreach($prods as $key2 => $prods2)
 		{
 			//var_dump($prods2);
-			echo "id: ".$prods2['id']->id . "\n";
+			echo "id: ".$prods2['id'] . "\n";
 			echo "tercer array". "<br>";
 		}
 

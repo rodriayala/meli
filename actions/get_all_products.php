@@ -26,9 +26,16 @@ print_r($listings['body']->results);
 echo '</pre>';
 */
 $result = $listings['body']->results;
-
-
-
+$quest_prods = "";
+foreach($result as $key => $id_prods)
+{
+	if(strlen(trim($quest_prods))==0)
+	$quest_prods = $id_prods;
+	else
+	$quest_prods = $quest_prods.",".$id_prods;
+}
+echo "lista final: ".$quest_prods;
+$listings2 = $meli -> multiget('/items?ids='.$quest_prods);
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">

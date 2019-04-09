@@ -39,8 +39,18 @@ $listings2 = $meli -> get('/items?ids='.$quest_prods);
 
 //$result2 = $listings2['body']->results;
 echo '<pre>';
-print_r($listings2);
+//print_r($listings2);
 echo '</pre>';
+
+foreach($listings2 as $producto => $detalles)
+{
+	echo "<h1> $producto </h1>";
+ 
+    foreach($detalles as $indice => $valor)
+	{
+		echo "<p> $indice:$valor </p>";
+	}
+}
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -90,6 +100,10 @@ echo '</pre>';
           </thead>  
           <tbody> 
 			<?php 	
+
+
+
+
 			//foreach($listings2 as $key => $prods)
 			foreach($listings2 as  $prods)
 			{

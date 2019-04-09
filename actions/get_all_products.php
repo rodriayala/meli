@@ -62,9 +62,9 @@ foreach($array as $mydata)
     	//echo $values->body . "\n";
 		echo "segundo array". "<br>";
 
-		foreach($prods as $key => $prods2)
+		foreach($prods as $key2 => $prods2)
 		{
-			echo $prods2->id . "\n";
+			echo "id: ".$prods2[$key2]->id . "\n";
 			echo "tercer array". "<br>";
 		}
 

@@ -46,7 +46,9 @@ echo '</pre>';
 
 $array = json_decode(json_encode($listings2),true);
 
-
+echo '<pre>';
+print_r($array);
+echo '</pre>';
 foreach($array->body as $mydata)
 {
 	echo $mydata->body . "\n";

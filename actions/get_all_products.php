@@ -49,7 +49,7 @@ $array = json_decode(json_encode($listings2),true);
 
 foreach($array->body as $mydata)
 {
-	echo $mydata->name . "\n";
+	echo $mydata->body . "\n";
     foreach($mydata->values as $values)
     {
     	echo $values->value . "\n";

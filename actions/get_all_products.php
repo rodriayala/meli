@@ -44,13 +44,13 @@ echo '</pre>';
 
 //$obj = json_decode($listings2);
 
-#$array = json_decode(json_encode($listings2),true);
+$array = json_decode(json_encode($listings2),true);
 
 echo '<pre>';
-print_r($array);
+//print_r($array);
 echo '</pre>';
 
-$array = json_decode($listings2);
+//$array = json_decode($listings2);
 //echo $character->body;
 foreach($array as $mydata)
 {

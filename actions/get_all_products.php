@@ -42,15 +42,7 @@ echo '<pre>';
 //print_r($listings2);
 echo '</pre>';
 
-foreach($listings2 as $producto => $detalles)
-{
-	echo "<h1> $producto </h1>";
- 
-    foreach($detalles as $indice => $valor)
-	{
-		echo "<p> $indice:$valor </p>";
-	}
-}
+
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -77,6 +69,17 @@ foreach($listings2 as $producto => $detalles)
 </head>
 <body>
 <?php include('../menu.php'); ?>
+
+<?php
+foreach($listings2 as $producto => $detalles)
+{
+	echo "<h1> $producto </h1>";
+ 
+    foreach($detalles as $indice => $valor)
+	{
+		echo "<p> $indice:$valor </p>";
+	}
+}?>
 	<div class="container">
     	<div class="row">
         	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">

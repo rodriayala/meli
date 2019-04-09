@@ -112,7 +112,7 @@ foreach($listings2 as $producto => $detalles)
 			{
 			?>	
           <tr>
-            <td><?php echo $prods[0][0][0][0]->id; ?></td><?php 
+            <td><?php echo $prods[0]['body'][0]['body']->id; ?></td><?php 
 				//veo detalle de los productos
 			
 				//$listings_prods = $meli -> get('/items/'.$id_prods);

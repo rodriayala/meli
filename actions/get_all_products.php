@@ -94,15 +94,15 @@ echo '</pre>';*/
 			{
 			?>	
           <tr>
-            <td><?php echo $prods['body']->id; ?></td><?php 
+            <td><?php echo $prods['body'][0]->id; ?></td><?php 
 				//veo detalle de los productos
 			
 				//$listings_prods = $meli -> get('/items/'.$id_prods);
 				//print_r($listings_prods['body']->results);
 			?>
-            <td><?php $prods['body']->title; ?></td>
-            <td><?php $prods['body']->available_quantity; ?></td>
-            <td><?php $prods['body']->price; ?></td>
+            <td><?php $prods['body'][0]->title; ?></td>
+            <td><?php $prods['body'][0]->available_quantity; ?></td>
+            <td><?php $prods['body'][0]->price; ?></td>
           </tr>
           	<?php
             }

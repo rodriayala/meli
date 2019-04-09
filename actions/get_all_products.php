@@ -39,7 +39,7 @@ $listings2 = $meli -> get('/items?ids='.$quest_prods);
 
 //$result2 = $listings2['body']->results;
 echo '<pre>';
-//print_r($listings2);
+print_r($listings2);
 echo '</pre>';
 
 

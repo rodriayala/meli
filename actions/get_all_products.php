@@ -64,7 +64,7 @@ foreach($array as $mydata)
 
 		foreach($prods as $key => $prods2)
 		{
-			//echo $values->body . "\n";
+			echo $prods2->id . "\n";
 			echo "tercer array". "<br>";
 		}
 

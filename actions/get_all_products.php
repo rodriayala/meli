@@ -56,9 +56,10 @@ foreach($array as $mydata)
 {
 	//echo $mydata->body . "\n";
     echo "primer array". "\n";
-	foreach($mydata->body as $values)
+	//foreach($mydata->body as $values)
+	foreach($mydata as $key => $prods)
     {
-    	echo $values->body . "\n";
+    	//echo $values->body . "\n";
 		echo "segundo array". "\n";
     }
 } 

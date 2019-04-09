@@ -70,16 +70,6 @@ echo '</pre>';
 <body>
 <?php include('../menu.php'); ?>
 
-<?php
-foreach($listings2 as $producto => $detalles)
-{
-	echo "<h1> $producto </h1>";
- 
-    foreach($detalles as $indice => $valor)
-	{
-		echo "<p> $indice:$valor </p>";
-	}
-}?>
 	<div class="container">
     	<div class="row">
         	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -107,8 +97,8 @@ foreach($listings2 as $producto => $detalles)
 
 
 
-			//foreach($listings2 as $key => $prods)
-			foreach($listings2 as  $prods)
+			foreach($listings2 as $key => $prods)
+			//foreach($listings2 as  $prods)
 			{
 			?>	
           <tr>

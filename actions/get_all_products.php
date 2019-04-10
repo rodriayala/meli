@@ -109,7 +109,7 @@ echo '</pre>';
 				{
 
 					foreach($prods as $key2 => $prods2)
-					{
+					{echo "---".$prods2['id']."---";
 						if(strlen(trim($prods2['id']))!=0)
 						{
 				?>	

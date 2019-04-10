@@ -54,7 +54,6 @@ $array = json_decode(json_encode($listings2),true);
 </head>
 <body>
 <?php include('../menu.php'); ?>
-
 	<div class="container">
     	<div class="row">
         	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -65,43 +64,354 @@ $array = json_decode(json_encode($listings2),true);
                 </div> 
             </div>
         </div>
-
-
-        <table class="table table-striped">
-          <thead>
-          <tr>
-            <td>CODIGO MERCADO LIBRE PRODUCTO</td>
-            <td>NOMBRE PRODUCTO</td>
-            <td>CANT.</td>
-            <td>PRECIO</td>
-          </tr>
-          </thead>  
-          <tbody><?php 	
-			foreach($array as $mydata)
-			{			
-				foreach($mydata as $key => $prods)
+		<?php 	
+		foreach($array as $mydata)
+		{			
+			foreach($mydata as $key => $prods)
+			{
+				foreach($prods as $key2 => $prods2)
 				{
-
-					foreach($prods as $key2 => $prods2)
+					if(strlen(trim($prods2['id']))!=0)
 					{
-						if(strlen(trim($prods2['id']))!=0)
-						{
-				?>	
-              <tr>
-                <td><?php echo $prods2['id']; ?></td>
-                <td><?php echo $prods2['title']; ?></td>
+		?>
                 <td><?php echo $prods2['available_quantity']; ?></td>
-                <td><?php echo $prods2['price']; ?></td>
-                <td><a href="get_one_produc.php"><?php echo $prods2['id']; ?></a></td>
-              </tr>
+		<div class="row">
+        	<div class="col-lg-12">
+            	<div class="ibox bg-boxshadow mb-50">
+                	<!-- Title -->
+                    <div class="ibox-title basic-form mb-30">
+                    	<h4>PRODUCTO: <?php echo $prods2['id']; ?> - <?php echo $prods2['title']; ?></h4>
+                    </div>
+                    <!-- Ibox-content -->
+                    <div class="ibox-content">
+                    	<form method="post">
+                        
+                        <?php if(($prods2['status'])=="active"){ ?>
+                        <div class="alert alert-success alert-dismissible fade show">
+                        	Publicación Activa
+                        </div>
+                        <?php } ?>
+                        
+                        <?php if(($prods2['status'])=="paused"){ ?>
+                        <div class="alert alert-warning alert-dismissible fade show">
+                        	Publicación Pausada
+                        </div>
+                        <?php } ?>
+                            
+                        <!-- Line -->
+                        <div class="ap-line-dashed"></div>                        
+                        <div class="form-group  row"><label class="col-sm-2 col-form-label">Categoria</label>
+                        	<div class="col-sm-10"><input type="text" class="form-control" value="<?php echo $prods2['category_id']; ?>"></div>
+                        </div>
+                        <!-- Line -->
+                        <div class="ap-line-dashed"></div>
+                        <div class="form-group  row"><label class="col-sm-2 col-form-label">Precio</label>
+                        	<div class="col-sm-10"><input type="text" class="form-control" value="<?php echo $prods2['price']; ?>"></div>
+                        </div>
+                        <!-- Line -->
+                        <div class="ap-line-dashed"></div>
+                        <div class="form-group  row"><label class="col-sm-2 col-form-label">Cantidad Disponible (Para venta)</label>
+                        	<div class="col-sm-10"><input type="text" class="form-control" value="<?php echo $prods2['available_quantity']; ?>"></div>
+                        </div>                        
+                        <!-- Line -->
+                        <div class="ap-line-dashed"></div>
+                        <div class="form-group  row"><label class="col-sm-2 col-form-label">Cantidad Vendidos</label>
+                        	<div class="col-sm-10"><input type="text" class="form-control" value="<?php echo $prods2['sold_quantity']; ?>"></div>
+                        </div>
+                        <!-- Line -->
+                        <div class="ap-line-dashed"></div>
+                        <div class="form-group  row"><label class="col-sm-2 col-form-label">Condición</label>
+                        	<div class="col-sm-10"><input type="text" class="form-control" value="<?php echo $prods2['condition']; ?>"></div>
+                        </div>
+                        
+                                            <div class="form-group row"><label class="col-sm-2 col-form-label">Help text</label>
+                                                <div class="col-sm-10"><input type="text" class="form-control"> <span class="form-text mb-15-none">A block of help text that breaks onto a new line and may extend beyond one line.</span>
+                                                </div>
+                                            </div>
+                                            <!-- Line -->
+                                            <div class="ap-line-dashed"></div>
+                                            <div class="form-group row"><label class="col-sm-2 col-form-label">Password</label>
+
+                                                <div class="col-sm-10"><input type="password" class="form-control" name="password"></div>
+                                            </div>
+                                            <div class="ap-line-dashed"></div>
+                                            <div class="form-group row"><label class="col-sm-2 col-form-label">Placeholder</label>
+
+                                                <div class="col-sm-10"><input type="text" placeholder="placeholder" class="form-control"></div>
+                                            </div>
+                                            <!-- Line -->
+                                            <div class="ap-line-dashed"></div>
+                                            <div class="form-group row"><label class="col-lg-2 col-form-label">Disabled</label>
+
+                                                <div class="col-lg-10"><input type="text" disabled="" placeholder="Disabled input here..." class="form-control"></div>
+                                            </div>
+                                            <div class="ap-line-dashed"></div>
+                                            <div class="form-group row"><label class="col-lg-2 col-form-label">Static control</label>
+
+                                                <div class="col-lg-10">
+                                                    <p class="form-control-static">email@example.com</p>
+                                                </div>
+                                            </div>
+                                            <!-- Line -->
+                                            <div class="ap-line-dashed"></div>
+                                            <div class="form-group row"><label class="col-sm-2 col-form-label">Checkboxes and radios <br> <small class="text-navy">Normal Bootstrap elements</small></label>
+
+                                                <div class="col-sm-10">
+                                                    <div><label> <input type="checkbox" value=""> Option one is this and that—be sure to include why it's great </label></div>
+                                                    <div><label> <input type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios"> Option one is this and that—be sure to include why it's great </label></div>
+                                                    <div><label> <input type="radio" value="option2" id="optionsRadios2" name="optionsRadios"> Option two can be something else and selecting it will deselect option one </label></div>
+                                                </div>
+                                            </div>
+                                            <!-- Line -->
+                                            <div class="ap-line-dashed"></div>
+
+                                            <div class="form-group row"><label class="col-sm-2 col-form-label">Inline checkboxes</label>
+                                                <div class="col-sm-10">
+                                                    <label class="mr-3"><input type="checkbox" value="option1" id="inlineCheckbox1"> a</label>
+                                                    <label class="checkbox-inline mr-3">
+                                                        <input type="checkbox" value="option2" id="inlineCheckbox2"> b</label>
+                                                    <label><input type="checkbox" value="option3" id="inlineCheckbox3"> c</label>
+                                                </div>
+                                            </div>
+
+                                            <!-- Line -->
+                                            <div class="ap-line-dashed"></div>
+                                            <div class="form-group row"><label class="col-sm-2 col-form-label">Checkboxes &amp; radios <br><small class="text-navy">Custom elements</small></label>
+                                                <div class="col-sm-10">
+                                                    <div class="i-checks"><label> <input type="checkbox" value=""> <i></i> Option one </label></div>
+                                                    <div class="i-checks"><label> <input type="checkbox" value="" checked=""> <i></i> Option two checked </label></div>
+                                                    <div class="i-checks"><label> <input type="checkbox" value="" disabled="" checked=""> <i></i> Option three checked and disabled </label></div>
+                                                    <div class="i-checks"><label> <input type="checkbox" value="" disabled=""> <i></i> Option four disabled </label></div>
+                                                    <div class="i-checks"><label> <input type="radio" value="option1" name="a"> <i></i> Option one </label></div>
+                                                    <div class="i-checks"><label> <input type="radio" checked="" value="option2" name="a"> <i></i> Option two checked </label></div>
+                                                    <div class="i-checks"><label> <input type="radio" disabled="" checked="" value="option2"> <i></i> Option three checked and disabled </label></div>
+                                                    <div class="i-checks"><label> <input type="radio" disabled="" name="a"> <i></i> Option four disabled </label></div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Line -->
+                                            <div class="ap-line-dashed"></div>
+                                            <div class="form-group row"><label class="col-sm-2 col-form-label">Inline checkboxes</label>
+                                                <div class="col-sm-10">
+                                                    <label class="checkbox-inline i-checks mr-3"> <input type="checkbox" value="option1"> a</label>
+                                                    <label class="i-checks mr-3"> <input type="checkbox" value="option2"> b</label>
+                                                    <label class="i-checks mr-3"> <input type="checkbox" value="option3"> c</label>
+                                                </div>
+                                            </div>
+
+                                            <!-- Line -->
+                                            <div class="ap-line-dashed"></div>
+                                            <div class="form-group row"><label class="col-sm-2 col-form-label">Select</label>
+                                                <div class="col-sm-10">
+                                                    <select class="form-control mb-15" name="account">
+                                                        <option>option 1</option>
+                                                        <option>option 2</option>
+                                                        <option>option 3</option>
+                                                        <option>option 4</option>
+                                                    </select>
+
+                                                    <div class="mt-30">
+                                                        <select class="form-control" multiple="">
+                                                            <option>option 1</option>
+                                                            <option>option 2</option>
+                                                            <option>option 3</option>
+                                                            <option>option 4</option>
+                                                        </select></div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Line -->
+                                            <div class="ap-line-dashed"></div>
+
+                                            <div class="form-group row has-success"><label class="col-sm-2 col-form-label">Input with success</label>
+                                                <div class="col-sm-10"><input type="text" class="form-control"></div>
+                                            </div>
+
+                                            <!-- Line -->
+                                            <div class="ap-line-dashed"></div>
+
+                                            <div class="form-group row has-warning"><label class="col-sm-2 col-form-label">Input with warning</label>
+                                                <div class="col-sm-10"><input type="text" class="form-control"></div>
+                                            </div>
+
+                                            <!-- Line -->
+                                            <div class="ap-line-dashed"></div>
+
+                                            <div class="form-group  row has-error"><label class="col-sm-2 col-form-label">Input with error</label>
+
+                                                <div class="col-sm-10"><input type="text" class="form-control"></div>
+                                            </div>
+
+                                            <div class="ap-line-dashed"></div>
+
+                                            <div class="form-group row"><label class="col-sm-2 col-form-label">Control sizing</label>
+
+                                                <div class="col-sm-10">
+                                                    <input type="text" placeholder=".form-control-lg" class="form-control form-control-lg mb-15">
+                                                    <input type="text" placeholder="Default input" class="form-control mb-15"> <input type="text" placeholder=".form-control-sm" class="form-control form-control-sm"></div>
+                                            </div>
+
+                                            <!-- Line -->
+                                            <div class="ap-line-dashed"></div>
+
+                                            <div class="form-group row"><label class="col-sm-2 col-form-label">Column sizing</label>
+                                                <div class="col-sm-10">
+                                                    <div class="row">
+                                                        <div class="col-md-2"><input type="text" placeholder=".col-md-2" class="form-control"></div>
+                                                        <div class="col-md-3"><input type="text" placeholder=".col-md-3" class="form-control"></div>
+                                                        <div class="col-md-4"><input type="text" placeholder=".col-md-4" class="form-control"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Line -->
+                                            <div class="ap-line-dashed"></div>
+                                            <div class="form-group row"><label class="col-sm-2 col-form-label">Input groups</label>
+                                                <div class="col-sm-10">
+                                                    <div class="input-group mb-15">
+                                                        <div class="input-group-prepend">
+                                                            <span class="input-group-addon">@</span>
+                                                        </div>
+                                                        <input type="text" placeholder="Username" class="form-control">
+                                                    </div>
+                                                    <div class="input-group mb-15">
+                                                        <input type="text" class="form-control">
+                                                        <div class="input-group-append">
+                                                            <span class="input-group-addon">.00</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="input-group mb-15">
+                                                        <div class="input-group-prepend">
+                                                            <span class="input-group-addon">$</span>
+                                                        </div>
+                                                        <input type="text" class="form-control">
+                                                        <div class="input-group-append">
+                                                            <span class="input-group-addon">.00</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="input-group mb-15">
+                                                        <div class="input-group-prepend">
+                                                            <span class="input-group-addon">
+                                                                <input type="checkbox">
+                                                            </span>
+                                                        </div>
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                    <div class="input-group mb-15">
+                                                        <div class="input-group-prepend">
+                                                            <span class="input-group-addon">
+                                                                <input type="radio">
+                                                            </span>
+                                                        </div>
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Line -->
+                                            <div class="ap-line-dashed"></div>
+                                            <div class="form-group row"><label class="col-sm-2 col-form-label">Button addons</label>
+
+                                                <div class="col-sm-10">
+                                                    <div class="input-group mb-15"><span class="input-group-prepend">
+                                                            <button type="button" class="btn btn-primary">Go!</button> </span> <input type="text" class="form-control">
+                                                    </div>
+
+                                                    <div class="input-group"><input type="text" class="form-control"> <span class="input-group-append"> <button type="button" class="btn btn-primary">Go!</button> </span></div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Line -->
+                                            <div class="ap-line-dashed"></div>
+
+                                            <div class="form-group row"><label class="col-sm-2 col-form-label">With dropdowns</label>
+                                                <div class="col-sm-10">
+                                                    <div class="input-group mb-15">
+                                                        <div class="input-group-prepend">
+                                                            <button data-toggle="dropdown" class="btn btn-white dropdown-toggle" type="button">Action </button>
+                                                            <ul class="dropdown-menu">
+                                                                <li><a href="#">Action</a></li>
+                                                                <li><a href="#">Another action</a></li>
+                                                                <li><a href="#">Something else here</a></li>
+                                                                <li class="dropdown-divider"></li>
+                                                                <li><a href="#">Separated link</a></li>
+                                                            </ul>
+                                                        </div>
+
+                                                        <input type="text" class="form-control">
+                                                    </div>
+
+                                                    <div class="input-group"><input type="text" class="form-control">
+                                                        <div class="input-group-append">
+                                                            <button data-toggle="dropdown" class="btn btn-white dropdown-toggle" type="button">Action </button>
+                                                            <ul class="dropdown-menu float-right">
+                                                                <li><a href="#">Action</a></li>
+                                                                <li><a href="#">Another action</a></li>
+                                                                <li><a href="#">Something else here</a></li>
+                                                                <li class="dropdown-divider"></li>
+                                                                <li><a href="#">Separated link</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Line -->
+                                            <div class="ap-line-dashed"></div>
+
+                                            <div class="form-group row"><label class="col-sm-2 col-form-label">Segmented</label>
+                                                <div class="col-sm-10">
+                                                    <div class="input-group mb-15">
+                                                        <div class="input-group-prepend">
+                                                            <button tabindex="-1" class="btn btn-white" type="button">Action</button>
+                                                            <button data-toggle="dropdown" class="btn btn-white dropdown-toggle" type="button"></button>
+                                                            <ul class="dropdown-menu">
+                                                                <li><a href="#">Action</a></li>
+                                                                <li><a href="#">Another action</a></li>
+                                                                <li><a href="#">Something else here</a></li>
+                                                                <li class="dropdown-divider"></li>
+                                                                <li><a href="#">Separated link</a></li>
+                                                            </ul>
+                                                        </div>
+
+                                                        <input type="text" class="form-control">
+                                                    </div>
+                                                    <div class="input-group"><input type="text" class="form-control">
+                                                        <div class="input-group-append">
+                                                            <button tabindex="-1" class="btn btn-white" type="button">Action</button>
+                                                            <button data-toggle="dropdown" class="btn btn-white dropdown-toggle" type="button"></button>
+                                                            <ul class="dropdown-menu float-right">
+                                                                <li><a href="#">Action</a></li>
+                                                                <li><a href="#">Another action</a></li>
+                                                                <li><a href="#">Something else here</a></li>
+                                                                <li class="dropdown-divider"></li>
+                                                                <li><a href="#">Separated link</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                            <!-- Line -->
+                                            <div class="ap-line-dashed"></div>
+
+                                            <div class="form-group mb-0 row">
+                                                <div class="col-12">
+                                                    <button class="btn btn-white btn-sm mr-10" type="submit">Cancel</button>
+                                                    <button class="btn btn-primary btn-sm" type="submit">Save changes</button>
+                                                </div>
+                                            </div>
+
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
           	<?php
 						}
 					}			
 				}
 			} 
 			?>
-          </tbody>
-        </table>
 
 	</div><!-- fin container -->
 

@@ -137,3 +137,10 @@ display:block !important;
     background-color: #f1f1f1;
     border: 1px solid #D8D8D8;
 }
+
+
+.ibox-title.basic-form {
+    border-top: 1px solid #ebebeb;
+    border-bottom: 1px solid #ebebeb;
+    padding: 15px 0;
+}

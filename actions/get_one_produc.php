@@ -88,17 +88,17 @@ $array = json_decode(json_encode($listings2),true);
                         
                         <?php if(trim($prods2['status'])=="active"){ ?>
                         <div class="form-group  row">
-                        	<div class="alert alert-success alert-dismissible fade show">
-                        	Publicación Activa
-                        	</div>
+                        	<div class="col-sm-10">
+                            	<div class="alert alert-success alert-dismissible fade show">Publicación Activa</div>
+                            </div>
                         </div>
                         <?php } echo "status".trim($prods2['status']);?>
                         
                         <?php if(trim($prods2['status'])=="paused"){ echo 1;?>
                         <div class="form-group  row">
-                        	<div class="alert alert-warning alert-dismissible fade show">
-                        	Publicación Pausada
-                        	</div>
+                        	<div class="col-sm-10">
+                            	<div class="alert alert-warning alert-dismissible fade show">Publicación Pausada</div>
+                            </div>
                         </div>                        
                         <?php } ?>
                             

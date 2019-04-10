@@ -52,29 +52,7 @@ echo '</pre>';
 
 //$array = json_decode($listings2);
 //echo $character->body;
-foreach($array as $mydata)
-{
-	//echo $mydata->body . "\n";
-   # echo "primer array". "<br>";
-	//foreach($mydata->body as $values)
-	foreach($mydata as $key => $prods)
-    {
-    	//echo $values->body . "\n";
-		#echo "segundo array". "<br>";
 
-		foreach($prods as $key2 => $prods2)
-		{
-			//var_dump($prods2);
-			echo "id: ".$prods2['id'] . "<br>";
-			echo "title: ".$prods2['title'] . "<br>";
-			echo "available_quantity: ".$prods2['available_quantity'] . "<br>";
-			echo "price: ".$prods2['price'] . "<br>";
-			
-			//echo "tercer array". "<br>";
-		}
-
-    }
-} 
 	
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -124,29 +102,26 @@ foreach($array as $mydata)
             <td>PRECIO</td>
           </tr>
           </thead>  
-          <tbody> 
-			<?php 	
+          <tbody><?php 	
+			foreach($array as $mydata)
+			{			
+				foreach($mydata as $key => $prods)
+				{
 
-
-
-
-			foreach($listings2 as $key => $prods)
-			//foreach($listings2 as  $prods)
-			{
-			?>	
-          <tr>
-            <td><?php echo $prods[0][0][0]; ?></td><?php 
-				//veo detalle de los productos
-			
-				//$listings_prods = $meli -> get('/items/'.$id_prods);
-				//print_r($listings_prods['body']->results);
-			?>
-            <td><?php $prods[0]->title; ?></td>
-            <td><?php $prods[0]->available_quantity; ?></td>
-            <td><?php $prods[0]->price; ?></td>
-          </tr>
+					foreach($prods as $key2 => $prods2)
+					{
+				?>	
+              <tr>
+                <td><?php echo $prods2['id']; ?></td>
+                <td><?php echo $prods2['title']; ?></td>
+                <td><?php echo $prods2['available_quantity']; ?></td>
+                <td><?php echo $prods2['price']; ?></td>
+              </tr>
           	<?php
-            }
+					}
+			
+				}
+			} 
 			?>
           </tbody>
         </table>

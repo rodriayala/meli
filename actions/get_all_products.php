@@ -110,6 +110,8 @@ echo '</pre>';
 
 					foreach($prods as $key2 => $prods2)
 					{
+						if(strlen(trim($prods2['id']))!=0)
+						{
 				?>	
               <tr>
                 <td><?php echo $prods2['id']; ?></td>
@@ -118,8 +120,8 @@ echo '</pre>';
                 <td><?php echo $prods2['price']; ?></td>
               </tr>
           	<?php
-					}
-			
+						}
+					}			
 				}
 			} 
 			?>

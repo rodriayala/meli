@@ -92,7 +92,7 @@ $array = json_decode(json_encode($listings2),true);
                         </div>
                         <?php } echo "status".trim($prods2['status']);?>
                         
-                        <?php if(trim($prods2['status'])=="paused"){ ?>
+                        <?php if(trim($prods2['status'])=="paused"){ echo 1;?>
                         <div class="alert alert-warning alert-dismissible fade show">
                         	Publicación Pausada
                         </div>

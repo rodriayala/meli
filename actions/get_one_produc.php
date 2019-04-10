@@ -6,49 +6,23 @@ require '../configApp.php';
 
 $meli = new Meli($appId, $secretKey);
 
-//echo "<br>**********<br>";
-$access_token = $_SESSION['access_token'];
-$client_id	  = $_SESSION['client_id'];
-$user_id = $_SESSION['user_id'];
-/*
-echo "<br>**********<br>";
-print_r($_SESSION);	
-echo "<br>**********<br>";	
-*/		
+$access_token 	= $_SESSION['access_token'];
+$client_id	  	= $_SESSION['client_id'];
+$user_id		= $_SESSION['user_id'];
 
-$listings = $meli -> get('/users/'.$user_id.'/items/search?access_token='.$access_token);
-//$listings = $meli -> get('/sites/MLA/search?seller_id='.$client_id);
+$id_prod		= $_GET['id_prod'];
 
-//print_r($listings['body']->results);
-/*echo '<pre>';
-print_r($listings['body']->results);
-//print_r($listings);
-echo '</pre>';
-*/
-$result = $listings['body']->results;
-$quest_prods = "";
-foreach($result as $key => $id_prods)
-{
-	if(strlen(trim($quest_prods))==0)
-	$quest_prods = $id_prods;
-	else
-	$quest_prods = $quest_prods.",".$id_prods;
-}
-//echo "lista final: ".$quest_prods;
-$listings2 = $meli -> get('/items?ids='.$quest_prods);
+$listings2 = $meli -> get('/items?ids='.$id_prod);
 
 //$result2 = $listings2['body']->results;
-#echo '<pre>';
-//print_r($listings2);
-#echo '</pre>';
+echo '<pre>';
+print_r($listings2);
+echo '</pre>';
 
 //$obj = json_decode($listings2);
 
 $array = json_decode(json_encode($listings2),true);
 
-#echo '<pre>';
-//print_r($array);
-#echo '</pre>';
 
 //$array = json_decode($listings2);
 //echo $character->body;
@@ -118,7 +92,7 @@ $array = json_decode(json_encode($listings2),true);
                 <td><?php echo $prods2['title']; ?></td>
                 <td><?php echo $prods2['available_quantity']; ?></td>
                 <td><?php echo $prods2['price']; ?></td>
-                <td><a href="get_one_produc.php?id_prod=<?php echo $prods2['id']; ?>">VER</a></td>
+                <td><a href="get_one_produc.php"><?php echo $prods2['id']; ?></a></td>
               </tr>
           	<?php
 						}

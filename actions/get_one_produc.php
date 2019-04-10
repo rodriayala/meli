@@ -98,15 +98,10 @@ $array = json_decode(json_encode($listings2),true);
                         <?php if(trim($prods2['status'])=="paused"){ ?>
                         <div class="form-group  row">
                         	<div class="col-sm-10">
-                            	<div class="alert alert-warning alert-dismissible fade show">Publicación Pausada</div>
+                            	<div class="alert alert-warning">Publicación Pausada</div>
                             </div>
                         </div>  
-                        
-                        <!-- Line -->
-                        <div class="ap-line-dashed"></div>                        
-                        <div class="form-group  row"><label class="col-sm-2 col-form-label">xxxx</label>
-                        	<div class="col-sm-10"><input type="text" class="form-control" value="<?php echo $prods2['category_id']; ?>"></div>
-                        </div>                      
+                                          
                         <?php } ?>
                             
                         <!-- Line -->

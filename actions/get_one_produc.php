@@ -86,13 +86,13 @@ $array = json_decode(json_encode($listings2),true);
                     <div class="ibox-content">
                     	<form method="post">
                         
-                        <?php if(($prods2['status'])=="active"){ ?>
+                        <?php if(trim($prods2['status'])=="active"){ ?>
                         <div class="alert alert-success alert-dismissible fade show">
                         	Publicación Activa
                         </div>
                         <?php } ?>
                         
-                        <?php if(($prods2['status'])=="paused"){ ?>
+                        <?php if(trim($prods2['status'])=="paused"){ ?>
                         <div class="alert alert-warning alert-dismissible fade show">
                         	Publicación Pausada
                         </div>

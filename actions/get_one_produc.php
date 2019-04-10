@@ -85,7 +85,8 @@ $array = json_decode(json_encode($listings2),true);
                     <!-- Ibox-content -->
                     <div class="ibox-content">
                     	<form method="post">
-                        
+                        <!-- Line -->
+                        <div class="ap-line-dashed"></div> 
                         <?php if(trim($prods2['status'])=="active"){ ?>
                         <div class="form-group  row">
                         	<div class="col-sm-10">

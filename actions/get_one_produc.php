@@ -27,7 +27,12 @@ $array = json_decode(json_encode($listings2),true);
 //$array = json_decode($listings2);
 //echo $character->body;
 
-	
+$description = $meli -> get('/items/'.$id_prod.'/description');	
+foreach($description as $arr_description)
+{	
+	$local_des = $arr_description['plain_text'];
+}
+
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -74,7 +79,6 @@ $array = json_decode(json_encode($listings2),true);
 					if(strlen(trim($prods2['id']))!=0)
 					{
 		?>
-                <td><?php echo $prods2['available_quantity']; ?></td>
 		<div class="row">
         	<div class="col-lg-12">
             	<div class="ibox bg-boxshadow mb-50">
@@ -93,12 +97,13 @@ $array = json_decode(json_encode($listings2),true);
                             	<div class="alert alert-success alert-dismissible fade show">Publicación Activa</div>
                             </div>
                         </div>
-                        <?php } echo "status".trim($prods2['status']);?>
+                        <?php } ?>
                         
                         <?php if(trim($prods2['status'])=="paused"){ ?>
                         <div class="form-group  row">
                         	<div class="col-sm-10">
                             	<div class="alert alert-warning">Publicación Pausada</div>
+                                	<span class="input-group-prepend"><a href="<?php echo $prods2['permalink']; ?>"><button type="button" class="btn btn-primary">VER PUBLICACION</button></a> </span>
                             </div>
                         </div>  
                                           
@@ -106,29 +111,44 @@ $array = json_decode(json_encode($listings2),true);
                             
                         <!-- Line -->
                         <div class="ap-line-dashed"></div>                        
-                        <div class="form-group  row"><label class="col-sm-2 col-form-label">Categoria</label>
-                        	<div class="col-sm-10"><input type="text" class="form-control" value="<?php echo $prods2['category_id']; ?>"></div>
+                        <div class="form-group  row"><label class="col-sm-3 col-form-label">Categoria</label>
+                        	<div class="col-sm-9"><input type="text" class="form-control" value="<?php echo $prods2['category_id']; ?>"></div>
                         </div>
                         <!-- Line -->
                         <div class="ap-line-dashed"></div>
-                        <div class="form-group  row"><label class="col-sm-2 col-form-label">Precio</label>
-                        	<div class="col-sm-10"><input type="text" class="form-control" value="<?php echo $prods2['price']; ?>"></div>
+                        <div class="form-group  row"><label class="col-sm-3 col-form-label">Precio</label>
+                        	<div class="col-sm-9"><input type="text" class="form-control" value="<?php echo $prods2['price']; ?>"> $AR </div>
                         </div>
                         <!-- Line -->
                         <div class="ap-line-dashed"></div>
-                        <div class="form-group  row"><label class="col-sm-2 col-form-label">Cantidad Disponible (Para venta)</label>
-                        	<div class="col-sm-10"><input type="text" class="form-control" value="<?php echo $prods2['available_quantity']; ?>"></div>
+                        <div class="form-group  row"><label class="col-sm-3 col-form-label">Cantidad Disponible (Para venta)</label>
+                        	<div class="col-sm-9"><input type="text" class="form-control" value="<?php echo $prods2['available_quantity']; ?>"></div>
                         </div>                        
                         <!-- Line -->
                         <div class="ap-line-dashed"></div>
-                        <div class="form-group  row"><label class="col-sm-2 col-form-label">Cantidad Vendidos</label>
-                        	<div class="col-sm-10"><input type="text" class="form-control" value="<?php echo $prods2['sold_quantity']; ?>"></div>
+                        <div class="form-group  row"><label class="col-sm-3 col-form-label">Cantidad Vendidos</label>
+                        	<div class="col-sm-9"><input type="text" class="form-control" value="<?php echo $prods2['sold_quantity']; ?>"></div>
                         </div>
                         <!-- Line -->
                         <div class="ap-line-dashed"></div>
-                        <div class="form-group  row"><label class="col-sm-2 col-form-label">Condición</label>
-                        	<div class="col-sm-10"><input type="text" class="form-control" value="<?php echo $prods2['condition']; ?>"></div>
+                        <div class="form-group  row"><label class="col-sm-3 col-form-label">Condición</label>
+                        	<div class="col-sm-9"><input type="text" class="form-control" value="<?php echo $prods2['condition']; ?>"></div>
                         </div>
+                        <!-- Line -->
+                        <div class="ap-line-dashed"></div>
+                        <div class="form-group  row"><label class="col-sm-3 col-form-label">Condición</label>
+                        	<div class="col-sm-9"><textarea name="" cols="100%" rows="10" class="form-control"><?php echo $local_des; ?></textarea></div>
+                        </div>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
                         
                                             <div class="form-group row"><label class="col-sm-2 col-form-label">Help text</label>
                                                 <div class="col-sm-10"><input type="text" class="form-control"> <span class="form-text mb-15-none">A block of help text that breaks onto a new line and may extend beyond one line.</span>

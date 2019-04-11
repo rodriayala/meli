@@ -28,7 +28,14 @@ $array = json_decode(json_encode($listings2),true);
 //echo $character->body;
 
 $description = $meli -> get('/items/'.$id_prod.'/description');	
-foreach($description as $arr_description)
+
+echo '<pre>';
+print_r($description);
+echo '</pre>';
+
+$array_description = json_decode(json_encode($description),true);
+
+foreach($array_description as $arr_description)
 {	
 	$local_des = $arr_description['plain_text'];
 }

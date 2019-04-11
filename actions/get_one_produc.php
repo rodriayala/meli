@@ -15,10 +15,10 @@ $id_prod		= $_GET['id_prod'];
 $listings2 = $meli -> get('/items?ids='.$id_prod);
 
 //$result2 = $listings2['body']->results;
-echo '<pre>';
+/*echo '<pre>';
 print_r($listings2);
 echo '</pre>';
-
+*/
 //$obj = json_decode($listings2);
 
 $array = json_decode(json_encode($listings2),true);
@@ -28,13 +28,13 @@ $array = json_decode(json_encode($listings2),true);
 //echo $character->body;
 
 $description = $meli -> get('/items/'.$id_prod.'/description');	
-echo $description['body']->plain_text;
-
+$local_des = $description['body']->plain_text;
+/*
 echo '<pre>';
 print_r($description);
 echo '</pre>';
-
-$array_description = json_decode(json_encode($description),true);
+*/
+/*$array_description = json_decode(json_encode($description),true);
 
 foreach($array_description as $arr_des)
 {	echo 1;
@@ -43,7 +43,7 @@ foreach($array_description as $arr_des)
 	{echo 2;
 		echo $local_des = $arr_des2['plain_text'];
 	}
-}
+}*/
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">

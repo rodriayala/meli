@@ -37,7 +37,7 @@ $array_description = json_decode(json_encode($description),true);
 
 foreach($array_description as $arr_description)
 {	echo 1;
-	foreach($arr_description as $key2 => $arr_description2)
+	foreach($arr_description2 as $key2 => $arr_description2)
 	{echo 2;
 		echo $local_des = $arr_description2['plain_text'];
 	}

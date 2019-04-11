@@ -35,9 +35,12 @@ echo '</pre>';
 
 $array_description = json_decode(json_encode($description),true);
 
-foreach($array_description as $arr_description)
+foreach($array_description as $key =>$arr_description)
 {	
-	$local_des = $arr_description['plain_text'];
+	foreach($arr_description as $key2 => $arr_description2)
+	{
+		$local_des = $arr_description2['plain_text'];
+	}
 }
 
 ?>

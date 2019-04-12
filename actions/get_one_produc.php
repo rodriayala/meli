@@ -3,7 +3,7 @@ session_start();
 error_reporting(E_ALL);
 require '../Meli/meli.php';
 require '../configApp.php';
-
+require '../Meli/functions.php';
 $meli = new Meli($appId, $secretKey);
 
 $access_token 	= $_SESSION['access_token'];
@@ -15,9 +15,9 @@ $id_prod		= $_GET['id_prod'];
 $listings2 = $meli -> get('/items?ids='.$id_prod);
 
 //$result2 = $listings2['body']->results;
-echo '<pre>';
-print_r($listings2);
-echo '</pre>';
+#echo '<pre>';
+#print_r($listings2);
+#echo '</pre>';
 
 //$obj = json_decode($listings2);
 
@@ -125,7 +125,7 @@ foreach($array_description as $arr_des)
                         <!-- Line -->
                         <div class="ap-line-dashed"></div>                        
                         <div class="form-group  row"><label class="col-sm-3 col-form-label">Categoria</label>
-                        	<div class="col-sm-9"><input type="text" class="form-control" value="<?php echo $prods2['category_id']; ?>"></div>
+                        	<div class="col-sm-9"><input type="text" class="form-control" value="<?php echo get_caterogy_desc($prods2['category_id']); ?>"></div>
                         </div>
                         <!-- Line -->
                         <div class="ap-line-dashed"></div>

@@ -464,10 +464,14 @@ foreach($array_description as $arr_des)
                         </div>
                         
 
+		<?php 	
+			foreach($prods2['pictures'] as $key_pic => $pictures)
+			{
+		?>  
         <div class="row">
             <div class="col-md-4 col-sm-6">
                 <div class="boxing">
-                    <img class="img-responsive" src="https://img-s1.onedio.com/id-54c6b5e2c94e49b748a0e97e/rev-0/w-635/listing/f-jpg-webp/s-fbf17e1da9eeb5220adf64301c400d788d45888c.webp" alt="">
+                    <img class="img-responsive" src="<?php echo $pictures['url']; ?>" alt="">
                     <div class="box-content">
                         <div class="content">
                             <h3 class="title">Hale Nur Çalışkan</h3>
@@ -480,7 +484,12 @@ foreach($array_description as $arr_des)
                     </div>
                 </div>
             </div> 
-		</div>                                     
+		</div>
+		<?php 	
+			}
+		?>         
+        
+                                             
           	<?php
 						}
 					}			

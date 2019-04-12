@@ -95,7 +95,7 @@ foreach($array_description as $arr_des)
             	<div class="ibox bg-boxshadow mb-50">
                 	<!-- Title -->
                     <div class="ibox-title basic-form mb-30">
-                    	<h4>PRODUCTO: <?php echo $prods2['id']; ?> - <?php echo $prods2['title']; ?></h4><a href="<?php echo trim($prods2['permalink']); ?>"><input name="verml" type="button"  value="VER EN ML"/></a>
+                    	<h4>PRODUCTO: <?php echo $prods2['id']; ?> - <?php echo $prods2['title']; ?></h4><a href="<?php echo trim($prods2['permalink']); ?>"><input name="verml" type="button"  value="VER EN ML" class="btn m-2 btn-xl btn-warning"/></a>
                     </div>
                     <!-- Ibox-content -->
                     <div class="ibox-content">

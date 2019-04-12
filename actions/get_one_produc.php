@@ -155,6 +155,8 @@ foreach($array_description as $arr_des)
                         <div class="ap-line-dashed"></div>
                         
                      	<?php 	
+							echo trim($prods2['sale_terms'])."<br>";
+							echo $prods2['sale_terms']->name."<br>";
 							foreach($prods2 as $key2 => $prods3)
 							{ echo trim($prods3['name']);
 								//if(strlen(trim($prods2['id']))!=0)

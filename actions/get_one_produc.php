@@ -487,7 +487,21 @@ foreach($array_description as $arr_des)
             </div> 
 		<?php 	
 			}
-		?>         
+		?>
+            <div class="col-md-4 col-sm-6">
+                <div class="boxing">
+                    <i class="fa fa-plus"></i>
+                    <div class="box-content">
+                        <div class="content">
+                            <h3 class="title">¿Queres agregar una foto?</h3>
+                            <ul class="icon">
+                                <li><a href="#"><i class="fa fa-plus"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+                             
 	</div>        
     <!--FIN IMAGENES-->                                         
           	<?php

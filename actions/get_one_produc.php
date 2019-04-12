@@ -479,7 +479,7 @@ foreach($array_description as $arr_des)
                             <h3 class="title">¿Queres eliminar esta foto?</h3>
                             <!--<span class="post">Front End Developer</span>-->
                             <ul class="icon">
-                                <li><a href="#"><i class="fa fa-trash"></i></a></li>
+                                <li><a href="#"><i class="fas fa-trash"></i></a></li>
                                 <!--<li><a href="#"><i class="fa fa-link"></i></a></li>-->
                             </ul>
                         </div>
@@ -491,12 +491,12 @@ foreach($array_description as $arr_des)
 		?>
             <div class="col-md-4 col-sm-6">
                 <div class="boxing">
-                    <i class="fa fa-plus"></i>
+                    <i class="fas fa-plus"></i>
                     <div class="box-content">
                         <div class="content">
                             <h3 class="title">¿Queres agregar una foto?</h3>
                             <ul class="icon">
-                                <li><a href="#"><i class="fa fa-plus"></i></a></li>
+                                <li><a href="#"><i class="fas fa-plus"></i></a></li>
                             </ul>
                         </div>
                     </div>

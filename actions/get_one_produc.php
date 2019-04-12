@@ -491,7 +491,7 @@ foreach($array_description as $arr_des)
 		?>
             <div class="col-md-4 col-sm-6">
                 <div class="boxing">
-                    <i class="fas fa-plus"></i>
+                    <img class="img-responsive" src="../img/plus.png" alt="">
                     <div class="box-content">
                         <div class="content">
                             <h3 class="title">¿Queres agregar una foto?</h3>

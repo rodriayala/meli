@@ -15,10 +15,10 @@ $id_prod		= $_GET['id_prod'];
 $listings2 = $meli -> get('/items?ids='.$id_prod);
 
 //$result2 = $listings2['body']->results;
-/*echo '<pre>';
+echo '<pre>';
 print_r($listings2);
 echo '</pre>';
-*/
+
 //$obj = json_decode($listings2);
 
 $array = json_decode(json_encode($listings2),true);

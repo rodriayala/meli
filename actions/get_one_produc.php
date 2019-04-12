@@ -185,7 +185,7 @@ foreach($array_description as $arr_des)
 			{
 		?>  
 
-            <div class="col-md-4 col-sm-6">
+            <div class="col-md-3 col-sm-4">
                 <div class="boxing">
                     <img class="img-responsive" src="<?php echo $pictures['url']; ?>" alt="">
                     <div class="box-content">
@@ -203,7 +203,7 @@ foreach($array_description as $arr_des)
 		<?php 	
 			}
 		?>
-            <div class="col-md-4 col-sm-6">
+            <div class="col-md-3 col-sm-4">
                 <div class="boxing">
                     <img class="img-responsive" src="../img/plus.png" alt="">
                     <div class="box-content">
@@ -228,7 +228,7 @@ foreach($array_description as $arr_des)
 
 	<div class="row">
 		<div class="form-group mb-0 row">
-			<div class="col-12">
+			<div class="col-12 ibox-title basic-form mb-30" style="text-align: right;">
             	<button class="btn btn-white btn-sm mr-10" type="submit">Cancelar</button>
            		<button class="btn btn-primary btn-sm" type="submit">Guardar Cambios</button>
             </div>

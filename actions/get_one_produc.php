@@ -474,11 +474,11 @@ foreach($array_description as $arr_des)
                     <img class="img-responsive" src="<?php echo $pictures['url']; ?>" alt="">
                     <div class="box-content">
                         <div class="content">
-                            <h3 class="title">Hale Nur Çalışkan</h3>
-                            <span class="post">Front End Developer</span>
+                            <h3 class="title">¿Queres eliminar esta foto?</h3>
+                            <!--<span class="post">Front End Developer</span>-->
                             <ul class="icon">
-                                <li><a href="#"><i class="fa fa-search"></i></a></li>
-                                <li><a href="#"><i class="fa fa-link"></i></a></li>
+                                <li><a href="#"><i class="fa fa-trash"></i></a></li>
+                                <!--<li><a href="#"><i class="fa fa-link"></i></a></li>-->
                             </ul>
                         </div>
                     </div>

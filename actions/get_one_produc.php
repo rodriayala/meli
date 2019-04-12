@@ -156,7 +156,7 @@ foreach($array_description as $arr_des)
                         
                      	<?php 	
 							foreach($prods2 as $key2 => $prods3)
-							{trim($prods3['name']);
+							{ echo trim($prods3['name']);
 								//if(strlen(trim($prods2['id']))!=0)
 								//{
 						?>   

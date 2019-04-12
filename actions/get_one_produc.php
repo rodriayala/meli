@@ -160,7 +160,7 @@ foreach($array_description as $arr_des)
 							foreach($prods2['sale_terms'] as $key2 => $prods3)
 							{
 						?>   
-                        <div class="form-group row"><label class="col-sm-2 col-form-label">GARANTIA</label>
+                        <div class="form-group row"><label class="col-sm-3 col-form-label">GARANTIA</label>
                          	<div class="col-sm-9">
                                	<select class="form-control mb-15" name="account">
                                 	<option <?php if(trim($prods3['value_name'])=="Con garantía") echo 'selected'; ?> >CON GARANTIA</option>

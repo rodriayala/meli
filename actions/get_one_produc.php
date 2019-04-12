@@ -125,7 +125,7 @@ foreach($array_description as $arr_des)
                         <!-- Line -->
                         <div class="ap-line-dashed"></div>                        
                         <div class="form-group  row"><label class="col-sm-3 col-form-label">Categoria</label>
-                        	<div class="col-sm-9"><input type="text" class="form-control" value="<?php echo get_caterogy_desc($prods2['category_id']); ?>"></div>
+                        	<div class="col-sm-9"><input type="text" class="form-control" value="<?php echo get_caterogy_desc($prods2['category_id']); ?>" disabled="disabled"></div>
                         </div>
                         <!-- Line -->
                         <div class="ap-line-dashed"></div>
@@ -140,7 +140,7 @@ foreach($array_description as $arr_des)
                         <!-- Line -->
                         <div class="ap-line-dashed"></div>
                         <div class="form-group  row"><label class="col-sm-3 col-form-label">Cantidad Vendidos</label>
-                        	<div class="col-sm-9"><input type="text" class="form-control" value="<?php echo $prods2['sold_quantity']; ?>"></div>
+                        	<div class="col-sm-9"><input type="text" class="form-control" value="<?php echo $prods2['sold_quantity']; ?>" disabled="disabled" ></div>
                         </div>
                         <!-- Line -->
                         <div class="ap-line-dashed"></div>
@@ -161,7 +161,7 @@ foreach($array_description as $arr_des)
 							{
 						?>   
                         <div class="form-group row"><label class="col-sm-2 col-form-label">GARANTIA</label>
-                         	<div class="col-sm-10">
+                         	<div class="col-sm-9">
                                	<select class="form-control mb-15" name="account">
                                 	<option <?php if(trim($prods3['value_name'])=="Con garantía") echo 'selected'; ?> >CON GARANTIA</option>
                                     <option <?php if(trim($prods3['value_name'])=="Sin garantía") echo 'selected'; ?> >SIN GARANTIA</option>

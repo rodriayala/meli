@@ -67,6 +67,7 @@ foreach($array_description as $arr_des)
     <script src="../js/jquery-3.3.1.min.js"></script>
 	<script src="../js/bootstrap-3.3.7.js"></script>
     
+    <link rel="stylesheet" href="../css/box.css">
 </head>
 <body>
 <?php include('../menu.php'); ?>
@@ -95,7 +96,7 @@ foreach($array_description as $arr_des)
             	<div class="ibox bg-boxshadow mb-50">
                 	<!-- Title -->
                     <div class="ibox-title basic-form mb-30">
-                    	<h4>PRODUCTO: <?php echo $prods2['id']; ?> - <?php echo $prods2['title']; ?></h4><a href="<?php echo trim($prods2['permalink']); ?>"><input name="verml" type="button"  value="VER EN ML" class="btn m-2 btn-xl btn-warning"/></a>
+                    	<h4>PRODUCTO: <?php echo $prods2['id']; ?> - <?php echo $prods2['title']; ?></h4><a href="<?php echo trim($prods2['permalink']); ?>" target="_blank" ><input name="verml" type="button"  value="VER EN ML" class="btn m-2 btn-xl btn-warning"/></a>
                     </div>
                     <!-- Ibox-content -->
                     <div class="ibox-content">
@@ -127,8 +128,8 @@ foreach($array_description as $arr_des)
                         </div>
                         <!-- Line -->
                         <div class="ap-line-dashed"></div>
-                        <div class="form-group  row"><label class="col-sm-3 col-form-label">Precio</label>
-                        	<div class="col-sm-9"><input type="text" class="form-control" value="<?php echo $prods2['price']; ?>"> $AR </div>
+                        <div class="form-group  row"><label class="col-sm-3 col-form-label">Precio ($AR):</label>
+                        	<div class="col-sm-9"><input type="text" class="form-control" value="<?php echo $prods2['price']; ?>"></div>
                         </div>
                         <!-- Line -->
                         <div class="ap-line-dashed"></div>
@@ -461,6 +462,25 @@ foreach($array_description as $arr_des)
                                 </div>
                             </div>
                         </div>
+                        
+
+        <div class="row">
+            <div class="col-md-4 col-sm-6">
+                <div class="boxing">
+                    <img class="img-responsive" src="https://img-s1.onedio.com/id-54c6b5e2c94e49b748a0e97e/rev-0/w-635/listing/f-jpg-webp/s-fbf17e1da9eeb5220adf64301c400d788d45888c.webp" alt="">
+                    <div class="box-content">
+                        <div class="content">
+                            <h3 class="title">Hale Nur Çalışkan</h3>
+                            <span class="post">Front End Developer</span>
+                            <ul class="icon">
+                                <li><a href="#"><i class="fa fa-search"></i></a></li>
+                                <li><a href="#"><i class="fa fa-link"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+		</div>                                     
           	<?php
 						}
 					}			

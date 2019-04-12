@@ -155,3 +155,35 @@ display:block !important;
     background-color: #d4edda;
     border-color: #c3e6cb;
 }
+
+
+
+.btn-xl {
+    padding: 20px 40px;
+    font-size: 20px;
+    line-height: 1;
+}
+
+.btn-warning {
+    border-color: transparent;
+    background: #FFD950;
+    color: #665720;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 14px;
+    line-height: 1;
+    border-radius: 6px;
+}
+btn-warning {
+    background-color: #f1c40f !important;
+    border-color: transparent;
+    color: #333;
+}
+.btn, .btn:hover, .btn:focus {
+    font-weight: 500;
+    -webkit-transition-duration: 500ms;
+    -o-transition-duration: 500ms;
+    transition-duration: 500ms;
+}

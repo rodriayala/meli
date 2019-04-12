@@ -147,10 +147,30 @@ foreach($array_description as $arr_des)
                         </div>
                         <!-- Line -->
                         <div class="ap-line-dashed"></div>
-                        <div class="form-group  row"><label class="col-sm-3 col-form-label">Condición</label>
+                        <div class="form-group  row"><label class="col-sm-3 col-form-label">Descripción del producto</label>
                         	<div class="col-sm-9"><textarea name="" cols="100%" rows="10" class="form-control"><?php echo $local_des; ?></textarea></div>
                         </div>
+ 						
+                        <!-- Line -->
+                        <div class="ap-line-dashed"></div>
                         
+                     	<?php 	
+							foreach($prods2 as $key2 => $prods3)
+							{trim($prods3['name']);
+								//if(strlen(trim($prods2['id']))!=0)
+								//{
+						?>   
+                        <div class="form-group row"><label class="col-sm-2 col-form-label">GARANTIA</label>
+                         	<div class="col-sm-10">
+                               	<select class="form-control mb-15" name="account">
+                                	<option>CON GARANTIA</option>
+                                    <option>SIN GARANTIA</option>
+                                </select>
+                                </div> 
+                        </div>                          
+                        <?php 	
+							}
+						?>  
                         
                         
                         

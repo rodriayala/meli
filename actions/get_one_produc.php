@@ -155,18 +155,14 @@ foreach($array_description as $arr_des)
                         <div class="ap-line-dashed"></div>
                         
                      	<?php 	
-							echo var_dump($prods2['sale_terms'])."<br>";
-							
 							foreach($prods2['sale_terms'] as $key2 => $prods3)
-							{ echo trim($prods3['name']);
-								//if(strlen(trim($prods2['id']))!=0)
-								//{
+							{
 						?>   
                         <div class="form-group row"><label class="col-sm-2 col-form-label">GARANTIA</label>
                          	<div class="col-sm-10">
                                	<select class="form-control mb-15" name="account">
-                                	<option>CON GARANTIA</option>
-                                    <option>SIN GARANTIA</option>
+                                	<option <?php if(trim($prods3['value_name'])=="Con garantía") echo 'selected'; ?> >CON GARANTIA</option>
+                                    <option <?php if(trim($prods3['value_name'])=="Sin garantía") echo 'selected'; ?> >SIN GARANTIA</option>
                                 </select>
                                 </div> 
                         </div>                          

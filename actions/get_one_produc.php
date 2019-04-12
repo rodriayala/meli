@@ -463,12 +463,13 @@ foreach($array_description as $arr_des)
                             </div>
                         </div>
                         
-
+	<!--IMAGENES-->
+	<div class="row">
 		<?php 	
 			foreach($prods2['pictures'] as $key_pic => $pictures)
 			{
 		?>  
-        <div class="row">
+
             <div class="col-md-4 col-sm-6">
                 <div class="boxing">
                     <img class="img-responsive" src="<?php echo $pictures['url']; ?>" alt="">
@@ -484,12 +485,11 @@ foreach($array_description as $arr_des)
                     </div>
                 </div>
             </div> 
-		</div>
 		<?php 	
 			}
 		?>         
-        
-                                             
+	</div>        
+    <!--FIN IMAGENES-->                                         
           	<?php
 						}
 					}			
